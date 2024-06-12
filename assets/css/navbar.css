@@ -1,0 +1,84 @@
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--black);
+    color: var(--green);
+}
+
+.title-name {
+    font-family: 'JejuHallasan';
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu li a:hover {
+    color: #ff6347;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: var(--black);
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    .title-name{
+        margin: auto !important
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-right: 0 !important;
+        margin-left: 0 !important
+    }
+
+    #menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+}
